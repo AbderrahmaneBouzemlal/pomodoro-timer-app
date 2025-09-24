@@ -1,7 +1,8 @@
 <script>
   import { icons } from '../utils/icons.js';
   import { projects } from '../data/projects.js';
-  import ProjectCard from './ProjectCard.svelte';
+  // @ts-ignore
+  import { ProjectCard } from './ProjectCard.svelte';
   
 </script>
 
