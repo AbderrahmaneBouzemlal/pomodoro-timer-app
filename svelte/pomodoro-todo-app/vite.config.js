@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 
 export default defineConfig({
-  base: "https://abderrahmanebouzemlal.github.io/pomodoro-app",
+  base: "https://abderrahmanebouzemlal.github.io/pomodoro-timer-app",
   plugins: [svelte(), tailwindcss()],
 })
