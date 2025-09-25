@@ -6,7 +6,7 @@ const TIMER_STATE_KEY = Symbol('timer-state');
 function createSessionStore(initialValue = { 
     actualPomodoros: 0,
     estimatedPomodoros: 1,
-    title: 'Current Task',
+    title: '',
     isCompleted: false,
     id: null
 }) {
@@ -18,9 +18,12 @@ function createSessionStore(initialValue = {
         setTask(task) {
             state = {...task};
         },
+        updateTask(updates) {
+            state = { ...state, ...updates };
+        },
 
         clearTask() {
-            state.title = 'Current Task';
+            state.title = '';
             state.estimatedPomodoros = 1;
             state.actualPomodoros = 0;
             state.isCompleted = false;
@@ -38,7 +41,7 @@ function createSessionStore(initialValue = {
         reset() {
             state.actualPomodoros = 0;
             state.estimatedPomodoros = 1;
-            state.title = 'Current Task';
+            state.title = '';
             state.isCompleted = false;
             state.id = null;
         }
